@@ -1,0 +1,13 @@
+
+.itemFriends {
+  display: flex;
+  margin-bottom: 5px;
+  align-content: center;
+  justify-content: left;
+  align-items: center;
+  box-shadow: 10px 5px 5px gray;
+}
+
+.avatarFriends {
+  margin-right: 5px;
+}
