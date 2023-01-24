@@ -1,0 +1,40 @@
+.profile {
+  background-color: whitesmoke;
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+  box-shadow: 10px 5px 5px ghostwhite;
+}
+.description {
+  text-align: center;
+}
+.avatar {
+  margin-bottom: 10px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: gray;
+}
+.name {
+  font-weight: 700;
+}
+
+.stats {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: ghostwhite;
+}
+.label {
+  display: flex;
+  margin-right: 20px;
+  justify-content: center;
+}
+.quantity {
+  display: flex;
+  margin-right: 20px;
+  font-weight: 700;
+  text-align: center;
+  justify-content: center;
+
+}
+

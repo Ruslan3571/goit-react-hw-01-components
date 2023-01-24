@@ -1,0 +1,20 @@
+.friend-list__block {
+  list-style: none;
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.item-friends {
+  display: flex;
+  margin-bottom: 5px;
+  align-content: center;
+  justify-content: left;
+  align-items: center;
+  /* border: 1px solid gray; */
+  box-shadow: 10px 5px 5px gray;
+}
+
+.avatar-friends {
+  margin-right: 5px;
+}

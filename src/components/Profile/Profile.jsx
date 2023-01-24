@@ -1,72 +1,37 @@
-import user from '../info/user.json';
+import css from '../Profile/Profile-style.css';
 
-<div class="profile">
-  <div class="description">
-    <img
-      src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-      alt="User avatar"
-      class="avatar"
-    />
-    <p class="name">Petra Marica</p>
-    <p class="tag">@pmarica</p>
-    <p class="location">Salvador, Brasil</p>
-  </div>
+export function Profile({ username, tag, location, avatar, stats }) {
+  const userStats = [
+    {
+      title: 'Followers',
+      quantity: stats.followers,
+    },
+    {
+      title: 'Views',
+      quantity: stats.views,
+    },
+    {
+      title: 'Likes',
+      quantity: stats.likes,
+    },
+  ];
+  return (
+    <div className="profile">
+      <div className="description">
+        <img src={avatar} alt="User avatar" className="avatar" />
+        <p className="name">{username}</p>
+        <p className="tag">@{tag}</p>
+        <p className="location">{location}</p>
+      </div>
 
-  <ul class="stats">
-    <li>
-      <span class="label">Followers</span>
-      <span class="quantity">1000</span>
-    </li>
-    <li>
-      <span class="label">Views</span>
-      <span class="quantity">2000</span>
-    </li>
-    <li>
-      <span class="label">Likes</span>
-      <span class="quantity">3000</span>
-    </li>
-  </ul>
-</div>;
-
-
-
-
-// export const Profile = ({ username, tag, location, avatar, stats }) => {
-//     const userStats = [
-//         {
-//             title: 'Folowers,'
-//     quantity: stats.followers,
-//         },
-//         {
-//             title: 'vievs,'
-//     quantity: stats.vievs,
-//         },
-// {
-//             title: 'likes,'
-//     quantity: stats.likes,
-//         },
-//     ]
-
-//     return (
-//  <div class="profile">
-//   <div class="description">
-//     <img
-//       src={avatar}
-//       alt="User avatar"
-//       class="avatar"
-//     />
-//     <p class="name">{username}</p>
-//     <p class="tag">{tag}</p>
-//     <p class="location">{location}</p>
-//   </div>
-
-//             <ul class="stats">
-//                 {userStats.map(element)=>{
-//     <li>
-//       <span class="label">Followers</span>
-//       <span class="quantity">1000</span>
-//     </li>
-//     }}
-//   </ul>
-//         </div>
-//     )}
+      <ul className="stats">
+        {userStats.map(el => (
+          <li key={el.title}>
+            <span className="label">{el.title}</span>
+            <span className="quantity">{el.quantity}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}

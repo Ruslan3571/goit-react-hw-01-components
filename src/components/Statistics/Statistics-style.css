@@ -1,0 +1,22 @@
+.statistics {
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: aliceblue;
+}
+.title {
+  text-transform: uppercase;
+  text-align: center;
+}
+.stat-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.label {
+  margin-bottom: 2px;
+  text-align: center;
+}
+.percentage {
+}
