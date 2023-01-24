@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import s from '../FriendList/FriendList.module.css';
 import { OnlineStatus } from '../FriendList/FriendList.styled.jsx';
 
@@ -21,3 +22,9 @@ export function FriendList({ friends }) {
     </ul>
   );
 }
+FriendList.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  isOnline: PropTypes.bool,
+  id: PropTypes.number,
+};

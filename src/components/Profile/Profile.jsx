@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import s from '../Profile/Profile.module.css';
 
 export function Profile({ username, tag, location, avatar, stats }) {
@@ -35,3 +36,14 @@ export function Profile({ username, tag, location, avatar, stats }) {
     </div>
   );
 }
+Profile.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.shape({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  }),
+};
