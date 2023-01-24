@@ -1,20 +1,20 @@
-import css from '../FriendList/FriendList.style.css';
+import s from '../FriendList/FriendList.module.css';
 import { OnlineStatus } from '../FriendList/FriendList.styled.jsx';
 
 export function FriendList({ friends }) {
   return (
-    <ul className="friend-list__block">
+    <ul className={s.friendListBlock}>
       {friends.map(({ avatar, name, isOnline, id }) => {
         return (
-          <li className="item-friends" key={id}>
+          <li className={s.itemFriends} key={id}>
             <OnlineStatus isOnline={isOnline} />
             <img
-              className="avatar-friends"
+              className={s.avatarFriends}
               src={avatar}
               alt="User avatar"
               width="48"
             />
-            <p className="name">{name}</p>
+            <p className={s.name}>{name}</p>
           </li>
         );
       })}

@@ -1,4 +1,4 @@
-.transaction-history {
+.transactionHistory {
   width: 600px;
   height: auto;
   margin: 0 auto;
@@ -7,7 +7,7 @@
   border: 1px solid black;
   text-align: center;
 }
-.transaction-head {
+.transactionHead {
   height: 40px;
   background-color: blue;
   color: white;

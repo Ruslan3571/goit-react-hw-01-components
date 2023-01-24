@@ -9,14 +9,17 @@
   text-transform: uppercase;
   text-align: center;
 }
-.stat-list {
+.statsList {
   list-style: none;
   display: flex;
   justify-content: center;
+  
 }
 .label {
+  display: flex;
   margin-bottom: 2px;
   text-align: center;
 }
-.percentage {
+.itemList {
+  margin-right: 20px;
 }

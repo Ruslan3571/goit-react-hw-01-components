@@ -1,9 +1,9 @@
-import css from '../TransactionHistory/TransactionHistory-style.css';
+import s from '../TransactionHistory/TransactionHistory.module.css';
 
 export function TransactionHistory({ transactions }) {
   return (
-    <table className="transaction-history">
-      <thead className="transaction-head">
+    <table className={s.transactionHistory}>
+      <thead className={s.transactionHead}>
         <tr>
           <th>Type</th>
           <th>Amount</th>
@@ -15,7 +15,7 @@ export function TransactionHistory({ transactions }) {
         return (
           <tbody key={id}>
             <tr>
-              <td className="transaction-first__string">{type}</td>
+              <td>{type}</td>
               <td>{amount}</td>
               <td>{currency}</td>
             </tr>

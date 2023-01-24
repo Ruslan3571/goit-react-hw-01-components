@@ -1,4 +1,4 @@
-import css from '../Profile/Profile-style.css';
+import s from '../Profile/Profile.module.css';
 
 export function Profile({ username, tag, location, avatar, stats }) {
   const userStats = [
@@ -16,19 +16,19 @@ export function Profile({ username, tag, location, avatar, stats }) {
     },
   ];
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
+    <div className={s.profile}>
+      <div className={s.description}>
+        <img src={avatar} alt="User avatar" className={s.avatar} />
+        <p className={s.name}>{username}</p>
+        <p className={s.tag}>@{tag}</p>
+        <p className={s.location}>{location}</p>
       </div>
 
-      <ul className="stats">
+      <ul className={s.stats}>
         {userStats.map(el => (
           <li key={el.title}>
-            <span className="label">{el.title}</span>
-            <span className="quantity">{el.quantity}</span>
+            <span className={s.label}>{el.title}</span>
+            <span className={s.quantity}>{el.quantity}</span>
           </li>
         ))}
       </ul>

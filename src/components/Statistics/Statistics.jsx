@@ -1,27 +1,17 @@
-import css from '../Statistics/Statistics-style.css';
+import s from '../Statistics/Statistics.module.css';
 
-export function Statistics({ stats }) {
+export function Statistics({ title, stats }) {
   return (
-    <section className="statistics">
-      <h2 className="title">Upload stats</h2>
-
-      <ul className="stat-list">
+    <section className={s.statistics}>
+      {title && <h2 className={s.title}>{title}</h2>}
+      <ul className={s.statsList}>
         {stats.map(el => (
-          <li className="item" key={el.id}>
-            <span className="label">{el.label}</span>
-            <span className="percentage">{el.percentage}%</span>
+          <li className={s.itemList} key={el.id}>
+            <span className={s.label}>{el.label}</span>
+            <span className={s.percentage}>{el.percentage}%</span>
           </li>
         ))}
       </ul>
     </section>
   );
 }
-
-
-// const userStats = [
-//   {
-//     id: stats.id,
-//     label: stats.label,
-//     percentage: stats.percentage,
-//   },
-// ];
